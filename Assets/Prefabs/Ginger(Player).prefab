@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1915235157438817429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5622605863490783420}
+  m_Layer: 8
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5622605863490783420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915235157438817429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.21, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6590500645814277189}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3206211759602149388
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,6 +112,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 164429517332351383}
+  - {fileID: 5622605863490783420}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -143,7 +175,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1475347225
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -508728509, guid: 8bec7495a2ace1143ac57a11c531ad0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -238,6 +270,9 @@ MonoBehaviour:
   moveSpeed: 7
   jumpSpeed: 20
   climbSpeed: 5
+  deathFling: {x: 0, y: 10}
+  gun: {fileID: 5622605863490783420}
+  bulletPrefab: {fileID: 5676363802534761171, guid: 1b1bbda676ed28643b75256a34e7f214, type: 3}
 --- !u!114 &6590500645222722828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +302,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5370518, y: 1}
+    m_SensorSize: {x: 1.6414341, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
