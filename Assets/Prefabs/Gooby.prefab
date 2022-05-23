@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2441731820548814558}
   - component: {fileID: 2441731820548814556}
   - component: {fileID: 9150808878394055438}
+  - component: {fileID: 1903922933}
   m_Layer: 11
   m_Name: Gooby
   m_TagString: Enemy
@@ -119,11 +120,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.07639295}
-  m_Size: {x: 0.7, y: 0.70000005}
+  m_Offset: {x: 0.03152275, y: -0.120524764}
+  m_Size: {x: 0.620142, y: 0.62854826}
   m_Direction: 0
 --- !u!95 &2441731820548814556
 Animator:
@@ -158,3 +159,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+--- !u!61 &1903922933
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441731820548814528}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.38, y: -0.34}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.03125, y: 0.90625}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.65}
+  m_EdgeRadius: 0
