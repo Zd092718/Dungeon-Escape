@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2441731820548814558}
   - component: {fileID: 2441731820548814556}
   - component: {fileID: 9150808878394055438}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gooby
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
