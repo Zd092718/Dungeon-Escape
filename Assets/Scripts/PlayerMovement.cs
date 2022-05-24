@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed = 7f;
     [SerializeField] float jumpSpeed = 25f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] float deathDelay = 2f;
     [SerializeField] Vector2 deathFling = new Vector2(0f, 10f);
     [SerializeField] Transform gun;
     [SerializeField] GameObject bulletPrefab;
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         Run();
         FlipSprite();
         ClimbLadder();
-        Die();
+        StartCoroutine(Die());
     }
 
     void OnMove(InputValue value)
@@ -100,13 +101,15 @@ public class PlayerMovement : MonoBehaviour
         myAnimator.SetBool("isClimbing", playerHasVerticalSpeed);
     }
 
-    void Die()
+    IEnumerator Die()
     {
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
         {
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             myRigidbody.velocity = deathFling;
+            yield return new WaitForSeconds(deathDelay);
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 }

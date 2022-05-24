@@ -175,7 +175,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1475347225
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -508728509, guid: 8bec7495a2ace1143ac57a11c531ad0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -270,7 +270,8 @@ MonoBehaviour:
   moveSpeed: 7
   jumpSpeed: 20
   climbSpeed: 5
-  deathFling: {x: 0, y: 20}
+  deathDelay: 2
+  deathFling: {x: -30, y: 20}
   gun: {fileID: 5622605863490783420}
   bulletPrefab: {fileID: 5676363802534761171, guid: 1b1bbda676ed28643b75256a34e7f214, type: 3}
 --- !u!114 &6590500645222722828
