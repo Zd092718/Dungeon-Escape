@@ -5,9 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed = 20f;
+    [SerializeField] int pointsPerKill = 30;
     Rigidbody2D myRigidbody;
     PlayerMovement player;
     float xSpeed;
+    bool wasKilled = false;
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -23,8 +25,10 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy" && !wasKilled)
         {
+            wasKilled = true;
+            FindObjectOfType<GameSession>().AddToScore(pointsPerKill);
             Destroy(other.gameObject);
         }
         Destroy(gameObject);
